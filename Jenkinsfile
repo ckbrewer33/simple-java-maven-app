@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                echo "this is a log message"
+                sh 'mvn clean package -B -DskipTests'
             }
         }
         stage('Test') {
